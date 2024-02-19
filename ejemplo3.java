@@ -3,7 +3,7 @@ package entornosTareaGit;
 public class ejemplo3 {
 	    private boolean estado;
 	    private boolean valido;
-
+private boolean acertado;
 	    public ejemplo3(boolean estado) {
 	        this.estado = estado;
 	    }
