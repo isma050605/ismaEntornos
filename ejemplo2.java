@@ -10,6 +10,7 @@ private int id;
 
 	    public void imprimirNumero() {
 	        System.out.println("Número desde ClaseDos: " + numero);
+	        System.out.println("Otro cambio");
 	    }
 	}
 

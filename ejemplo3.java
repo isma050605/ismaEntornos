@@ -10,6 +10,7 @@ private boolean acertado;
 
 	    public void imprimirEstado() {
 	        System.out.println("Estado desde ClaseTres: " + estado);
+	        System.out.println("Nuevo cambio");
 	    }
 	}
 

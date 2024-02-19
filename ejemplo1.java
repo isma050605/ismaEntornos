@@ -10,6 +10,7 @@ public class ejemplo1{
 
     public void imprimirMensaje() {
         System.out.println("Mensaje desde ClaseUno: " + mensaje);
+        System.out.println("Otro cambio mas");
     }
 }
 
