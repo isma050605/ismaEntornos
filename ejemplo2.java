@@ -9,7 +9,7 @@ public class ejemplo2 {
         private String direccion;
         private int idOficina;
         private String ddd;
-	   
+        private String Isma;
 public ejemplo2(int numero, int numero2, int numero3, int id, String direccion) {
 			super();
 			this.numero = numero;
@@ -17,15 +17,17 @@ public ejemplo2(int numero, int numero2, int numero3, int id, String direccion) 
 			this.numero3 = numero3;
 			this.id = id;
 			this.direccion = direccion;
+			this.Isma= Isma;
 		}
 
-
+public ejemplo2() {
+	super();
+	// TODO Auto-generated constructor stub
+}
 @Override
 public int hashCode() {
 	return Objects.hash(direccion);
 }
-
-
 @Override
 public boolean equals(Object obj) {
 	if (this == obj)
@@ -37,8 +39,6 @@ public boolean equals(Object obj) {
 	ejemplo2 other = (ejemplo2) obj;
 	return Objects.equals(direccion, other.direccion);
 }
-
-
 public int getNumero() {
 	return numero;
 }
@@ -53,8 +53,6 @@ private void suma() {
 	        System.out.println("Número desde ClaseDos: " + numero);
 	        System.out.println("Otro cambio");
 	        System.out.println("Este es el segundo cambio en el ejemplo 2 desde la rama jcisma");
-	        
+	        System.out.println("Este es el tercer cambio del ejemplo2 desde la rama jcisma");
 	    }
 	}
-
-
