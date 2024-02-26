@@ -12,5 +12,11 @@ public class ejemplo1{
         System.out.println("Mensaje desde ClaseUno: " + mensaje);
         System.out.println("Otro cambio mas");
     }
+    
+    public void imprimirMensaje2() {
+        System.out.println("Mensaje desde ClaseUno: " + mensaje);
+        System.out.println("Otro cambio mas");
+    }
+    
 }
 
