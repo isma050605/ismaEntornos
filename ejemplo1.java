@@ -25,6 +25,7 @@ public class ejemplo1 {
         System.out.println("El factorial de " + numero + " es: " + calcularFactorial(numero));
         System.out.println(numPrimo + " es primo: " + esPrimo(numPrimo));
         imprimirMensaje("Hola mundo");
+        imprimirMensaje("Este es otro mensaje");
     }
 
     public static int calcularFactorial(int num) {
@@ -40,5 +41,11 @@ public class ejemplo1 {
 
     public static void imprimirMensaje(String mensaje) {
         System.out.println("Mensaje: " + mensaje);
+    }
+
+    public void mostrarDatos() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Apellido: " + apellido);
+        System.out.println("Entornos: " + entornos);
     }
 }
