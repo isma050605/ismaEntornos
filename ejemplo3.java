@@ -25,12 +25,13 @@ public class ejemplo3 {
         id = rand.nextInt(1000); // Genera un número aleatorio entre 0 y 999 y lo asigna a id
     }
 
-    // Método para obtener el factorial del número
-    public int factorial() {
-        int factorial = 1;
-        for (int i = 1; i <= numero; i++) {
-            factorial *= i;
-        }
-        return factorial;
+    // Método para obtener el cuadrado del número
+    public int calcularCuadrado() {
+        return numero * numero;
+    }
+
+    // Método para verificar si el número es impar
+    public boolean esImpar() {
+        return numero % 2 != 0;
     }
 }
