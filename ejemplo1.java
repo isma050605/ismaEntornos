@@ -84,5 +84,7 @@ public class Ejemplo1 {
     // Método para imprimir el mensaje en mayúsculas
     public void imprimirMensajeEnMayusculas() {
         System.out.println("Mensaje en mayúsculas: " + mensaje.toUpperCase());
+
+        String elIsmael;
     }
 }
