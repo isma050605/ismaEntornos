@@ -11,12 +11,6 @@ public class ejemplo2 {
         this.direccion = direccion;
     }
 
-    public void imprimirDatos() {
-        System.out.println("Número: " + numero);
-        System.out.println("Dirección: " + direccion);
-        System.out.println("Datos impresos correctamente.");
-    }
-
     public String getDireccion() {
         return direccion;
     }
@@ -40,5 +34,21 @@ public class ejemplo2 {
 
     public void imprimirNumeroCaracteres() {
         System.out.println("La longitud de la dirección es: " + longitudDireccion());
+    }
+
+    public boolean esDireccionValida() {
+        // Implementa la lógica para verificar si la dirección es válida
+        // Por ejemplo, podría comprobar si la dirección contiene ciertos caracteres especiales
+        // o si tiene un formato específico
+        return true; // Por ahora, devolvemos siempre true como ejemplo
+    }
+
+    public void imprimirNumero() {
+        System.out.println("Número: " + numero);
+    }
+
+    public void duplicarNumero() {
+        numero *= 2;
+        System.out.println("El número ha sido duplicado.");
     }
 }
