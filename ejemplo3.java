@@ -3,15 +3,18 @@ import java.util.Random;
 public class Ejemplo3 {
     private int numero;
     private int id;
+    private String mensaje;
 
     public Ejemplo3() {
         this.numero = generarNumeroAleatorio();
         generarIdAleatorio();
+        this.mensaje = generarMensaje();
     }
 
     public void imprimirInformacion() {
         System.out.println("Número generado: " + numero);
         System.out.println("ID asignado: " + id);
+        System.out.println("Mensaje: " + mensaje);
         System.out.println("¡Datos impresos correctamente!");
     }
 
@@ -46,5 +49,11 @@ public class Ejemplo3 {
     // Método para obtener un número aleatorio entre un rango dado
     public int generarNumeroAleatorio(int min, int max) {
         return new Random().nextInt(max - min + 1) + min;
+    }
+
+    // Método para generar un mensaje aleatorio
+    private String generarMensaje() {
+        String[] mensajes = {"Hola", "Bonjour", "Hello", "Ciao", "Hola mundo", "Salut", "Hallo", "¡Hola!", "Hi"};
+        return mensajes[new Random().nextInt(mensajes.length)];
     }
 }
