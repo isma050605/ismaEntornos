@@ -1,7 +1,7 @@
 package entornosTareaGit;
 import java.util.Scanner;
-import java.util.ArrayList;
 import java.util.Objects;
+//hola
 public class ejemplo1{
     private String mensaje;
     private String ip;
@@ -22,6 +22,13 @@ public class ejemplo1{
 		return "ejemplo1 [mensaje=" + mensaje + ", ip=" + ip + ", nombre=" + nombre + ", apellido=" + apellido
 				+ ", entornos=" + entornos + "]";
 	}
+	 public static void solicitarYMostrarNombre() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Por favor, ingresa tu nombre: ");
+        String nombre = scanner.nextLine();
+        System.out.println("Hola, " + nombre + "! Bienvenido.");
+        scanner.close();
+    }
 	@Override
 	public int hashCode() {
 		return Objects.hash(apellido, entornos, nombre);
