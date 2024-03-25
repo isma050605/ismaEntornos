@@ -23,10 +23,26 @@ public class ejemplo1 {
         return num == 0 ? 1 : num * calcularFactorial(num - 1);
     }
 
+    public static boolean esPrimo(int num) {
+        if (num <= 1) {
+            return false;
+        }
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         int numero = 5;
         int factorial = calcularFactorial(numero);
         System.out.println("El factorial de " + numero + " es: " + factorial);
+
+        int numPrimo = 17;
+        boolean resultadoPrimo = esPrimo(numPrimo);
+        System.out.println(numPrimo + " es primo: " + resultadoPrimo);
     }
 
     public void imprimirMensaje2() {
