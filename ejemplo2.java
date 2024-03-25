@@ -11,10 +11,10 @@ public class ejemplo2 {
         this.direccion = direccion;
     }
 
-    public void imprimirNumero() {
+    public void imprimirDatos() {
         System.out.println("Número: " + numero);
         System.out.println("Dirección: " + direccion);
-        System.out.println("Se ha impreso el número y la dirección correctamente.");
+        System.out.println("Datos impresos correctamente.");
     }
 
     public boolean esPositivo() {
@@ -32,5 +32,9 @@ public class ejemplo2 {
 
     public boolean mismaDireccion(ejemplo2 otroEjemplo) {
         return Objects.equals(direccion, otroEjemplo.direccion);
+    }
+
+    public boolean contienePalabra(String palabra) {
+        return direccion.contains(palabra);
     }
 }
