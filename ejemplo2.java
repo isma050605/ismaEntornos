@@ -17,10 +17,6 @@ public class ejemplo2 {
         System.out.println("Datos impresos correctamente.");
     }
 
-    public boolean esPositivo() {
-        return numero > 0;
-    }
-
     public String getDireccion() {
         return direccion;
     }
@@ -36,5 +32,13 @@ public class ejemplo2 {
 
     public boolean contienePalabra(String palabra) {
         return direccion.contains(palabra);
+    }
+
+    public int longitudDireccion() {
+        return direccion.length();
+    }
+
+    public void imprimirNumeroCaracteres() {
+        System.out.println("La longitud de la dirección es: " + longitudDireccion());
     }
 }
