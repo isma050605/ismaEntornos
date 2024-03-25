@@ -1,14 +1,11 @@
-package entornosTareaGit;
-
-public class ejemplo1 {
+public class Ejemplo1 {
     private String mensaje;
     private String ip;
     private String nombre;
     private String apellido;
     private String entornos;
-    private int euro;
 
-    public ejemplo1(String mensaje, String ip, String nombre, String apellido, String entornos) {
+    public Ejemplo1(String mensaje, String ip, String nombre, String apellido, String entornos) {
         this.mensaje = mensaje;
         this.ip = ip;
         this.nombre = nombre;
@@ -43,11 +40,41 @@ public class ejemplo1 {
         int numPrimo = 17;
         boolean resultadoPrimo = esPrimo(numPrimo);
         System.out.println(numPrimo + " es primo: " + resultadoPrimo);
+
+        Ejemplo1 ejemplo = new Ejemplo1("Hola", "192.168.0.1", "Juan", "Pérez", "Desarrollo");
+        ejemplo.imprimirMensaje2();
     }
 
     public void imprimirMensaje2() {
-        System.out.println("Mensaje desde ClaseUno: " + mensaje);
-        System.out.println("Otro cambio mas");
-        System.out.println("Otro cambio mas");
+        System.out.println("Mensaje: " + mensaje);
+        System.out.println("Dirección IP: " + ip);
+        System.out.println("Nombre completo: " + nombre + " " + apellido);
+        System.out.println("Entorno: " + entornos);
+        System.out.println("Otro cambio más en el mensaje.");
+    }
+
+    // Método para obtener la longitud del mensaje
+    public int longitudMensaje() {
+        return mensaje.length();
+    }
+
+    // Método para verificar si la IP es válida
+    public boolean esIpValida() {
+        String[] partes = ip.split("\\.");
+        if (partes.length != 4) {
+            return false;
+        }
+        for (String parte : partes) {
+            int valor = Integer.parseInt(parte);
+            if (valor < 0 || valor > 255) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Método para imprimir el mensaje en mayúsculas
+    public void imprimirMensajeEnMayusculas() {
+        System.out.println("Mensaje en mayúsculas: " + mensaje.toUpperCase());
     }
 }
