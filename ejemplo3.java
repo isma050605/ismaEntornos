@@ -34,11 +34,6 @@ public class Ejemplo3 {
         return numero * numero;
     }
 
-    // Método para verificar si el número es impar
-    public boolean esImpar() {
-        return numero % 2 != 0;
-    }
-
     // Método para calcular el factorial del número
     public int calcularFactorial() {
         int factorial = 1;
@@ -46,5 +41,10 @@ public class Ejemplo3 {
             factorial *= i;
         }
         return factorial;
+    }
+
+    // Método para obtener un número aleatorio entre un rango dado
+    public int generarNumeroAleatorio(int min, int max) {
+        return new Random().nextInt(max - min + 1) + min;
     }
 }
