@@ -1,9 +1,15 @@
+
 public class Ejemplo1 {
+
     private String mensaje;
     private String ip;
     private String nombre;
     private String apellido;
-
+ public static void main(String[] args) {
+        int numero = 5;
+        int numPrimo = 17;
+       int factorial = calcularFactorial(numero);
+    );
     public Ejemplo1(String mensaje, String ip, String nombre, String apellido) {
         this.mensaje = mensaje;
         this.ip = ip;
@@ -11,28 +17,37 @@ public class Ejemplo1 {
         this.apellido = apellido;
     }
 
+    public static boolean esPar(int num) {
+        return num % 2 == 0;
+    }
+
+
+        System.out.println("El factorial de " + numero + " es: " + calcularFactorial(numero));
+        System.out.println(numPrimo + " es primo: " + esPrimo(numPrimo));
+        imprimirMensaje("Hola mundo");
+        imprimirMensaje("Este es otro mensaje");
+    }
+
     public static int calcularFactorial(int num) {
-        if (num < 0) {
-            throw new IllegalArgumentException("El número no puede ser negativo.");
-        }
+        if (num < 0) throw new IllegalArgumentException("El número no puede ser negativo.");
         return num == 0 ? 1 : num * calcularFactorial(num - 1);
     }
 
     public static boolean esPrimo(int num) {
-        if (num <= 1) {
-            return false;
-        }
-        for (int i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) {
-                return false;
-            }
-        }
+        if (num <= 1) return false;
+        for (int i = 2; i <= Math.sqrt(num); i++) if (num % i == 0) return false;
         return true;
     }
 
-    public static void main(String[] args) {
-        int numero = 5;
-        int factorial = calcularFactorial(numero);
+
+    public static void imprimirMensaje(String mensaje) {
+        System.out.println("Mensaje: " + mensaje);
+    }
+
+    public void mostrarDatos() {
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Apellido: " + apellido);
+        System.out.println("Entornos: " + entornos);
         System.out.println("El factorial de " + numero + " es: " + factorial);
 
         int numPrimo = 17;
@@ -49,13 +64,9 @@ public class Ejemplo1 {
         System.out.println("Nombre completo: " + nombre + " " + apellido);
         System.out.println("Otro cambio más en el mensaje.");
     }
-
-    // Método para obtener la longitud del mensaje
     public int longitudMensaje() {
         return mensaje.length();
     }
-
-    // Método para verificar si la IP es válida
     public boolean esIpValida() {
         String[] partes = ip.split("\\.");
         if (partes.length != 4) {
