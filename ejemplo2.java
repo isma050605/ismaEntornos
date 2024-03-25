@@ -11,7 +11,7 @@ public class ejemplo2 {
         this.direccion = direccion;
     }
 
-    public void imprimirDatos() {
+    public void imprimirNumeroYDireccion() {
         System.out.println("Número: " + numero);
         System.out.println("Dirección: " + direccion);
         System.out.println("Datos impresos correctamente.");
@@ -19,10 +19,6 @@ public class ejemplo2 {
 
     public boolean esPositivo() {
         return numero > 0;
-    }
-
-    public String getDireccion() {
-        return direccion;
     }
 
     public void cambiarDireccion(String nuevaDireccion) {
@@ -36,5 +32,26 @@ public class ejemplo2 {
 
     public boolean contienePalabra(String palabra) {
         return direccion.contains(palabra);
+    }
+
+    // Método para verificar si el número es par
+    public boolean esPar() {
+        return numero % 2 == 0;
+    }
+
+    // Método para obtener la longitud de la dirección
+    public int longitudDireccion() {
+        return direccion.length();
+    }
+
+    // Método para imprimir el número
+    public void imprimirNumero() {
+        System.out.println("Número: " + numero);
+    }
+
+    // Método para verificar si la dirección es válida
+    public boolean esDireccionValida() {
+        // Aquí podrías implementar una lógica para validar la dirección
+        return !direccion.isEmpty();
     }
 }
