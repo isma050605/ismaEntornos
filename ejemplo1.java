@@ -1,26 +1,26 @@
-public class ejemplo1 {
+
+public class Ejemplo1 {
+
     private String mensaje;
     private String ip;
     private String nombre;
     private String apellido;
-    private String entornos;
-    private int euro;
-
-    public ejemplo1(String mensaje, String ip, String nombre, String apellido, String entornos) {
+ public static void main(String[] args) {
+        int numero = 5;
+        int numPrimo = 17;
+       int factorial = calcularFactorial(numero);
+    );
+    public Ejemplo1(String mensaje, String ip, String nombre, String apellido) {
         this.mensaje = mensaje;
         this.ip = ip;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.entornos = entornos;
     }
 
     public static boolean esPar(int num) {
         return num % 2 == 0;
     }
 
-    public static void main(String[] args) {
-        int numero = 5;
-        int numPrimo = 17;
 
         System.out.println("El factorial de " + numero + " es: " + calcularFactorial(numero));
         System.out.println(numPrimo + " es primo: " + esPrimo(numPrimo));
@@ -39,6 +39,7 @@ public class ejemplo1 {
         return true;
     }
 
+
     public static void imprimirMensaje(String mensaje) {
         System.out.println("Mensaje: " + mensaje);
     }
@@ -47,5 +48,41 @@ public class ejemplo1 {
         System.out.println("Nombre: " + nombre);
         System.out.println("Apellido: " + apellido);
         System.out.println("Entornos: " + entornos);
+        System.out.println("El factorial de " + numero + " es: " + factorial);
+
+        int numPrimo = 17;
+        boolean resultadoPrimo = esPrimo(numPrimo);
+        System.out.println(numPrimo + " es primo: " + resultadoPrimo);
+
+        Ejemplo1 ejemplo = new Ejemplo1("Hola", "192.168.0.1", "Juan", "Pérez");
+        ejemplo.imprimirInformacion();
+    }
+
+    public void imprimirInformacion() {
+        System.out.println("Mensaje: " + mensaje);
+        System.out.println("Dirección IP: " + ip);
+        System.out.println("Nombre completo: " + nombre + " " + apellido);
+        System.out.println("Otro cambio más en el mensaje.");
+    }
+    public int longitudMensaje() {
+        return mensaje.length();
+    }
+    public boolean esIpValida() {
+        String[] partes = ip.split("\\.");
+        if (partes.length != 4) {
+            return false;
+        }
+        for (String parte : partes) {
+            int valor = Integer.parseInt(parte);
+            if (valor < 0 || valor > 255) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    // Método para imprimir el mensaje en mayúsculas
+    public void imprimirMensajeEnMayusculas() {
+        System.out.println("Mensaje en mayúsculas: " + mensaje.toUpperCase());
     }
 }

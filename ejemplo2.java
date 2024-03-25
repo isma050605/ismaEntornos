@@ -11,8 +11,15 @@ public class ejemplo2 {
         this.direccion = direccion;
     }
 
-    public String getDireccion() {
         return direccion;
+    public void imprimirDatos() {
+        System.out.println("Número: " + numero);
+        System.out.println("Dirección: " + direccion);
+        System.out.println("Datos impresos correctamente.");
+    }
+
+    public boolean esPositivo() {
+        return numero > 0;
     }
 
     public void cambiarDireccion(String nuevaDireccion) {
@@ -27,6 +34,7 @@ public class ejemplo2 {
     public boolean contienePalabra(String palabra) {
         return direccion.contains(palabra);
     }
+
 
     public int longitudDireccion() {
         return direccion.length();
@@ -50,5 +58,16 @@ public class ejemplo2 {
     public void duplicarNumero() {
         numero *= 2;
         System.out.println("El número ha sido duplicado.");
+
+    public boolean esNumeroMayor(int otroNumero) {
+        return numero > otroNumero;
+    }
+
+    public boolean esCadenaVacia() {
+        return direccion.isEmpty();
+    }
+
+    public void imprimirDireccion() {
+        System.out.println("Dirección: " + direccion);
     }
 }
