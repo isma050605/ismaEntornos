@@ -5,7 +5,7 @@ public class Ejemplo3 {
     private int id;
 
     public Ejemplo3() {
-        this.numero = generarNumeroAleatorio();
+        generarNumeroAleatorio();
         generarIdAleatorio();
     }
 
@@ -15,13 +15,9 @@ public class Ejemplo3 {
         System.out.println("¡Datos impresos correctamente!");
     }
 
-    public int getNumero() {
-        return numero;
-    }
-
     // Método para generar un número aleatorio
-    private int generarNumeroAleatorio() {
-        return new Random().nextInt(100) + 1; // Genera un número aleatorio entre 1 y 100
+    private void generarNumeroAleatorio() {
+        numero = new Random().nextInt(100) + 1; // Genera un número aleatorio entre 1 y 100
     }
 
     // Método para generar un ID aleatorio
@@ -29,22 +25,31 @@ public class Ejemplo3 {
         id = new Random().nextInt(1000); // Genera un número aleatorio entre 0 y 999 y lo asigna a id
     }
 
-    // Método para calcular el cuadrado del número
-    public int calcularCuadrado() {
-        return numero * numero;
-    }
-
     // Método para verificar si el número es impar
     public boolean esImpar() {
         return numero % 2 != 0;
     }
+    
+    // Método para calcular el triple del número
+    public int calcularTriple() {
+        return numero * 3;
+    }
+    
+    // Método para obtener un número primo aleatorio
+    public int obtenerPrimoAleatorio() {
+        int primo;
+        do {
+            primo = new Random().nextInt(100) + 1;
+        } while (!esPrimo(primo));
+        return primo;
+    }
 
-    // Método para calcular el factorial del número
-    public int calcularFactorial() {
-        int factorial = 1;
-        for (int i = 1; i <= numero; i++) {
-            factorial *= i;
+    // Método para verificar si un número es primo
+    private boolean esPrimo(int num) {
+        if (num <= 1) return false;
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) return false;
         }
-        return factorial;
+        return true;
     }
 }
