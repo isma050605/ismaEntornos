@@ -29,27 +29,14 @@ public class Ejemplo3 {
     public boolean esImpar() {
         return numero % 2 != 0;
     }
-    
+
     // Método para calcular el triple del número
     public int calcularTriple() {
         return numero * 3;
     }
-    
-    // Método para obtener un número primo aleatorio
-    public int obtenerPrimoAleatorio() {
-        int primo;
-        do {
-            primo = new Random().nextInt(100) + 1;
-        } while (!esPrimo(primo));
-        return primo;
-    }
 
-    // Método para verificar si un número es primo
-    private boolean esPrimo(int num) {
-        if (num <= 1) return false;
-        for (int i = 2; i <= Math.sqrt(num); i++) {
-            if (num % i == 0) return false;
-        }
-        return true;
+    // Método para calcular el doble del número
+    public int calcularDoble() {
+        return numero * 2;
     }
 }
