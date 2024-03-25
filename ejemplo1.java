@@ -2,6 +2,8 @@ package entornosTareaGit;
 import java.util.Scanner;
 import java.util.Objects;
 //hola
+
+
 public class ejemplo1{
     private String mensaje;
     private String ip;
@@ -45,18 +47,24 @@ public class ejemplo1{
 		return Objects.equals(apellido, other.apellido) && Objects.equals(entornos, other.entornos)
 				&& Objects.equals(nombre, other.nombre);
 	}
-	public void imprimirMensaje() {
-        System.out.println("Mensaje desde ClaseUno: " + mensaje);
-        System.out.println("Otro cambio mas");
-        System.out.println("Este es el primer cambio del ejemplo jcisma desde la rama jcisma");
-        System.out.println("Este es el segundo cambio del ejemplo 1 desde la rama jcisma");
-        System.out.println("Este es el tercer cambio del ejemplo 1 desde la rama jcisma");
+	public class Suma {
+    public static void main(String[] args) {
+        int numero1 = 30;
+        int numero2 = 10000000;
+        int resultado = sumarNumeros(numero1, numero2);
+        System.out.println("La suma de " + numero1 + " y " + numero2 + " es: " + resultado);
     }
+
+    public static int sumarNumeros(int num1, int num2) {
+        return num1 + num2;
+    }
+}
+//hola
     
     public void imprimirMensaje2() {
         System.out.println("Mensaje desde ClaseUno: " + mensaje);
         System.out.println("Otro cambio mas");
-        System.out.println("Otro cambio");
+        System.out.println("Otro cambio mas");
     }
     
 }
