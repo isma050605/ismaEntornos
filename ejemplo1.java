@@ -3,14 +3,12 @@ public class Ejemplo1 {
     private String ip;
     private String nombre;
     private String apellido;
-    private String entornos;
 
-    public Ejemplo1(String mensaje, String ip, String nombre, String apellido, String entornos) {
+    public Ejemplo1(String mensaje, String ip, String nombre, String apellido) {
         this.mensaje = mensaje;
         this.ip = ip;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.entornos = entornos;
     }
 
     public static int calcularFactorial(int num) {
@@ -41,15 +39,14 @@ public class Ejemplo1 {
         boolean resultadoPrimo = esPrimo(numPrimo);
         System.out.println(numPrimo + " es primo: " + resultadoPrimo);
 
-        Ejemplo1 ejemplo = new Ejemplo1("Hola", "192.168.0.1", "Juan", "Pérez", "Desarrollo");
-        ejemplo.imprimirMensaje2();
+        Ejemplo1 ejemplo = new Ejemplo1("Hola", "192.168.0.1", "Juan", "Pérez");
+        ejemplo.imprimirInformacion();
     }
 
-    public void imprimirMensaje2() {
+    public void imprimirInformacion() {
         System.out.println("Mensaje: " + mensaje);
         System.out.println("Dirección IP: " + ip);
         System.out.println("Nombre completo: " + nombre + " " + apellido);
-        System.out.println("Entorno: " + entornos);
         System.out.println("Otro cambio más en el mensaje.");
     }
 
