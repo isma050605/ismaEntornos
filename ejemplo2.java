@@ -12,17 +12,17 @@ public class ejemplo2 {
 
     public void imprimirNumero() {
         System.out.println("Número: " + numero);
-        System.out.println("Otro cambio");
-        System.out.println("Este es el segundo cambio en el ejemplo 2");
-        System.out.println("Este es el tercer cambio del ejemplo 2");
+        System.out.println("Se ha impreso el número correctamente.");
+        System.out.println("Este es el segundo cambio en el ejemplo 2.");
+        System.out.println("Se ha finalizado la impresión del número.");
     }
 
-    public boolean esPar(int num) {
-        return num % 2 == 0;
+    public boolean esPar() {
+        return numero % 2 == 0;
     }
 
-    public int calcularCuadrado(int num) {
-        return num * num;
+    public int calcularCuadrado() {
+        return numero * numero;
     }
 
     public void setDireccion(String direccion) {
@@ -31,6 +31,11 @@ public class ejemplo2 {
 
     public String getDireccion() {
         return direccion;
+    }
+
+    public void modificarDireccion(String nuevaDireccion) {
+        direccion = nuevaDireccion;
+        System.out.println("La dirección ha sido modificada correctamente.");
     }
 
     @Override
